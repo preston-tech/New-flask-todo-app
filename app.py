@@ -1,9 +1,15 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemt
 from flask_marshmallow import flask_marshmallow
+
+from flask_cors import CORS
+from flast_heroku import flast_heroku
+from environs import Env
+
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
